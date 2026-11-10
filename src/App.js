@@ -31,13 +31,15 @@ function App() {
     }
   }
 
+    return (
+      <div className="App bg-black w-full min-h-screen flex flex-col overflow-x-hidden">
+        <Navbar setActiveSection={setActiveSection} activeSection={activeSection}/>
 
-  return (
-    <div className="App bg-black h-screen">
-      <Navbar setActiveSection={setActiveSection} activeSection={activeSection} />
-      {renderSection()}
-    </div>
-  );
+        <main className="w-full flex-1">
+          {renderSection()}
+        </main>
+      </div>
+    );
 }
 
 export default App;

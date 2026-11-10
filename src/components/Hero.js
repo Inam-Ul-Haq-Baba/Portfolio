@@ -7,9 +7,9 @@ import gmail from "../assets/icons/gmail.svg"
 export default function Hero(){
     return(
     <>
-        <div className="hero flex flex-col-reverse items-center justify-center sm:flex-row text-white px-8 py-6 border-b-2 border-gray-500 w-screen">
+        <div className="hero flex flex-col-reverse items-center justify-center sm:flex-row text-white px-8 py-6 border-b-2 border-gray-500 w-full">
 
-            <div className="description flex flex-col items-center sm:items-start gap-5">
+            <div className="description flex flex-col items-center sm:items-start gap-5 w-full sm:w-3/5">
                 <div className="font-mono text-lg"> Hi, I'm <span className="text-2xl text-yellow-400 font-bold">Inam Ul Haq Baba</span></div>
                 <div className="text-xl font-bold">Full Stack Developer</div>
                 <div className="text-left text-gray-300">I enjoy building things for the web, from designing interactive interfaces to working on backend functionality. I'm always curious to learn something new and enjoy taking on challenges that help me grow as a developer.</div>
@@ -27,7 +27,7 @@ export default function Hero(){
                 </div>
             </div>
 
-            <div className="profilePic flex justify-center">
+            <div className="profilePic flex justify-center w-full sm:w-2/5">
                 <img className="w-2/3 sm:w-full" src={logo} alt="" />
             </div>
 
