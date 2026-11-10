@@ -24,19 +24,19 @@ export default function About(){
             </div>
 
             <div className="w-full flex flex-col justify-center items-center mb-4">
-                <div className="education bg-gray-900 px-3 py-3 w-full sm:w-4/5 md:w-3/4 m-2 rounded-lg">
+                <div className="education bg-zinc-900 px-3 py-3 w-full sm:w-4/5 md:w-3/4 m-2 rounded-lg">
                     <img className="w-8" src={graduation} alt="" />
                     <p className="text-gray-500">Education</p>
                     <p className="text-lg font-semibold">Master of Computer Applications</p>
                     <p className="text-sm text-gray-500">University of Kashmir</p>
                 </div>
-                <div className="interest bg-gray-900 px-3 py-3 w-full sm:w-4/5 md:w-3/4 m-2 rounded-lg">
+                <div className="interest bg-zinc-900 px-3 py-3 w-full sm:w-4/5 md:w-3/4 m-2 rounded-lg">
                     <img className="w-8" src={monitor} alt="" />
                     <p className="text-gray-500">Primary Interest</p>
                     <p className="text-lg font-semibold">Full Stack Development</p>
                     <p className="text-sm text-gray-500">Frontend & Backend</p>
                 </div>
-                <div className="approach bg-gray-900 px-3 py-3 w-full sm:w-4/5 md:w-3/4 m-2 rounded-lg">
+                <div className="approach bg-zinc-900 px-3 py-3 w-full sm:w-4/5 md:w-3/4 m-2 rounded-lg">
                     <img className="w-8" src={rocket} alt="" />
                     <p className="text-gray-500">My Approach</p>
                     <p className="text-lg font-semibold">Learn by building</p>

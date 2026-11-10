@@ -3,6 +3,7 @@ import github from "../assets/icons/github.svg"
 import linkedin from "../assets/icons/linkedin.svg"
 import gmail from "../assets/icons/gmail.svg"
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact(){
 
@@ -15,20 +16,58 @@ export default function Contact(){
         message: ""
     });
 
+    const [status, setStatus] = useState("");
+    const [loading, setLoading] = useState(false);
+
     function handleChange(e) {
         const { name, value } = e.target;
 
         setFormData((prev) => ({...prev,[name]: value,}));
     }
 
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault();
 
-        const body = encodeURIComponent(
-            `Name: ${formData.name}\nSubject: ${formData.subject}\nEmail: ${formData.email}\nMessage: ${formData.message}`
-        )
+        setLoading(true);
+        setStatus("");
 
-        window.location.href =  `mailto:${myEmail}?body=${body}`;
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            subject: formData.subject,
+            message: formData.message
+        };
+
+        try {
+            await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                templateParams,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+
+            setStatus("Message sent successfully!");
+
+            setFormData({
+                name: "",
+                subject: "",
+                email: "",
+                message: ""
+            });
+
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            setStatus("Unable to send your message. Please try again.");
+        } finally {
+        setLoading(false);
+        }
+
+        // const body = encodeURIComponent(
+        //     `Name: ${formData.name}\nSubject: ${formData.subject}\nEmail: ${formData.email}\nMessage: ${formData.message}`
+        // )
+
+        
+        // window.location.href =  `mailto:${myEmail}?body=${body}`;
     }
 
     return(
@@ -37,7 +76,7 @@ export default function Contact(){
             <p className="text-2xl font-semibold">Let's Connects</p>
             <p className=" text-sm text-gray-500">Have an idea, opportunity, or just want to say hello? I'd love to hear from you.</p>
         
-            <div className="grid grid-cols-1 sm:grid-cols-2 mt-5 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 mt-5 pt-4 gap-5 border-t border-zinc-800">
                     <div className=" flex flex-col gap-4 w-full">
 
                         <p className="text-xl font-semibold">Let's talk about something great.</p>
@@ -57,21 +96,33 @@ export default function Contact(){
 
                     </div>
                     
-                    <form onSubmit={handleSubmit} className="flex flex-col p-4 rounded-lg bg-gray-900 "> 
+                    <form onSubmit={handleSubmit} className="flex flex-col p-4 rounded-lg bg-zinc-900 "> 
                         <p className="text-lg font-semibold my-2">Send a message</p>
                         <label className="text-gray-500 text-sm mb-1"  htmlFor="">Your Name</label>
-                        <input className="bg-gray-800 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="name" type="text" onChange={handleChange} value={formData.name} placeholder="Enter your name" required/>
+                        <input className="bg-zinc-700 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="name" type="text" onChange={handleChange} value={formData.name} placeholder="Enter your name" required/>
 
                         <label className="text-gray-500 text-sm mb-1"  htmlFor="">Your Email</label>
-                        <input className="bg-gray-800 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="email" type="text" onChange={handleChange} value={formData.email} placeholder="Enter your email" required/>
+                        <input className="bg-zinc-700 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="email" type="email" onChange={handleChange} value={formData.email} placeholder="Enter your email" required/>
 
                         <label className="text-gray-500 text-sm mb-1" htmlFor="">Subject</label>
-                        <input className="bg-gray-800 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="subject" type="text" onChange={handleChange} value={formData.subject} placeholder="Subject" required/>
+                        <input className="bg-zinc-700 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="subject" type="text" onChange={handleChange} value={formData.subject} placeholder="Subject" required/>
 
                         <label className="text-gray-500 text-sm mb-1" htmlFor="">Message</label>
-                        <textarea className="bg-gray-800 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="message" type="text" onChange={handleChange} value={formData.message} placeholder="Write your message" required/>
+                        <textarea className="bg-zinc-700 text-gray-500 rounded-lg text-sm px-3 py-1 mb-2" name="message" onChange={handleChange} value={formData.message} placeholder="Write your message" required/>
 
-                        <input className="bg-yellow-400 text-black rounded-lg py-2 text-md font-semibold my-2" type="submit" value="Send Message ↗️" />
+                        <button  className="bg-yellow-400 text-black rounded-lg py-2 text-md font-semibold my-2" type="submit" disabled={loading} >  {loading ? "Sending..." : "Send Message ↗"} </button>
+                        
+                        {/*  Message sent text */}
+                        {status && (
+                            <p className={`text-sm text-center ${
+                                status.includes("successfully")
+                                    ? "text-green-400"
+                                    : "text-red-400"
+                            }`}>
+                                {status}
+                            </p>
+                        )}
+                        
                     </form>
             </div>
         </div>

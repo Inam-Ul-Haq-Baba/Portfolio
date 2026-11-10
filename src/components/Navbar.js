@@ -5,7 +5,7 @@ export default function Navbar({setActiveSection, activeSection}){
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="navbar flex justify-between items-center text-white font-mono font-semibold text-sm md:text-md px-10 py-6 border-b-2 border-gray-500">
+        <div className="navbar flex justify-between items-center text-white font-mono font-semibold text-sm md:text-md px-10 py-6 border-b-2 border-zinc-800">
             <div className="flex justify-between items-center gap-4">
                 <span className="flex justify-center items-center h-10 w-10 rounded-lg border-2 border-yellow-400 text-yellow-400 ">IH</span>
                 <span className="text-yellow-400 text-lg sm:text-xl md:text-2xl">Inam Ul Haq Baba</span>

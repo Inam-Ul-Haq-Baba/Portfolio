@@ -73,8 +73,8 @@ export default function Projects(){
                     <div className="projectDivs grid grid-cols-1 sm:grid-cols-2 gap-4 w-full my-5">
                         {
                             projects.map((project,index)=>(
-                                <div key={project.title} className="bg-gray-900 rounded-lg p-3">
-                                    <div className="flex justify-center p-3 bg-gray-800 rounded-lg my-2">
+                                <div key={project.title} className="bg-zinc-900 rounded-lg p-3">
+                                    <div className="flex justify-center p-3 bg-zinc-700 rounded-lg my-2">
                                         <img className="w-24" src={project.icon} alt="" />
                                     </div>
                                     

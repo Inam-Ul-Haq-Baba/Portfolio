@@ -25,29 +25,26 @@ export default function Hero(){
                         <img className="h-10" src={gmail} alt="" />
                     </a>
                 </div>
+
+                <div className="mt-8 bg-zinc-900 border border-zinc-800 rounded-xl p-5 max-w-md font-mono text-sm">
+                    <p className="text-purple-400">
+                        const <span className="text-yellow-400">developer</span> = {"{"}
+                    </p>
+
+                    <div className="pl-4 mt-2 space-y-2 text-gray-300">
+                        <p>name: <span className="text-green-300">"Inam Ul Haq Baba"</span>,</p>
+                        <p>role: <span className="text-green-300">"Full Stack Developer"</span>,</p>
+                        <p>passion: <span className="text-green-300">"Building useful things"</span></p>
+                    </div>
+
+                    <p className="text-purple-400 mt-2">{"};"}</p>
+                </div>
             </div>
 
             <div className="profilePic flex justify-center w-full sm:w-2/5">
-                <img className="w-2/3 sm:w-full" src={logo} alt="" />
+                <img className="w-2/3 sm:w-4/5" src={logo} alt="" />
             </div>
 
-        </div>
-        <div className="techstack px-8 flex flex-col items-center sm:items-start gap-2 my-4">
-            <p className="text-gray-400">My Tech Stack</p>
-            <div className="techs grid grid-cols-3 sm:flex gap-5">
-                <div className="techBtn">HTML</div>
-                <div className="techBtn">CSS</div>
-                <div className="techBtn">Tailwind CSS</div>
-                <div className="techBtn">JavaScript</div>
-                <div className="techBtn">jQuery</div>
-                <div className="techBtn">Node.js</div>
-                <div className="techBtn">Express.js</div>
-                <div className="techBtn">React.js</div>
-                <div className="techBtn">PostgreSQL</div>
-                <div className="techBtn">MySQL</div>
-                <div className="techBtn">MongoDB</div>
-            </div>
-                
         </div>
     </>
     );
