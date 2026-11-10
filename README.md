@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! This website showcases my skills, projects, and experience as a Full Stack Developer.
 
-🌐 **Live Portfolio:** [inam-ul-haq-baba.github.io/Portfolio](https://inam-ul-haq-baba.github.io/Portfolio/)
+🌐 **Live Portfolio:** [inam-ul-haq-baba.github.io/Portfolio](http://inam-ul-haq-baba.github.io/Portfolio/)
 
 ## About
 
