@@ -27,11 +27,11 @@ export default function Navbar({setActiveSection, activeSection}){
                 </div>
 
                 <div className={`absolute top-20 right-2  ${isOpen ? "flex" : "hidden"} flex-col justify-start items-start gap-3 bg-white rounded-lg text-black py-2 w-1/3`}>
-                    <a className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => setIsOpen(false)} href="#home">Home</a>
-                    <a className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => setIsOpen(false)} href="#about">About</a>
-                    <a className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => setIsOpen(false)} href="#skills">Skills</a>
-                    <a className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => setIsOpen(false)} href="#projects">Projects</a>
-                    <a className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => setIsOpen(false)} href="#contact">Contact</a>
+                    <button className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("home")}} href="#home">Home</button>
+                    <button className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("about")}} href="#about">About</button>
+                    <button className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("skills")}} href="#skills">Skills</button>
+                    <button className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("projects")}} href="#projects">Projects</button>
+                    <button className="rounded-2xl hover:bg-black hover:text-white active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("contact")}} href="#contact">Contact</button>
                 </div>
 
             </div>
