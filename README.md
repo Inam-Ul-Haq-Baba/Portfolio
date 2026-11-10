@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Inam Ul Haq Baba — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio! This website showcases my skills, projects, and experience as a Full Stack Developer.
+
+🌐 **Live Portfolio:** [inam-ul-haq-baba.github.io/Portfolio](https://inam-ul-haq-baba.github.io/Portfolio/)
+
+## About
+
+I'm a developer interested in building responsive, user-friendly web applications and exploring new technologies. I enjoy working on both frontend and backend development and continuously improving my technical skills.
+
+## Features
+
+- Responsive and modern user interface
+- Personal introduction and profile section
+- Skills and technologies showcase
+- Projects portfolio with descriptions and links
+- Contact form for direct communication
+- Resume download
+- Social media integration
+
+## Tech Stack
+
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript
+- React.js
+- Tailwind CSS
+
+**Tools & Technologies**
+- Vite
+- Git & GitHub
+- EmailJS
+
+## Projects
+
+Some of the projects featured in my portfolio include:
+
+- **Smart Lawn Maintenance:** An Android application for detecting lawn weeds using YOLOv9 and ONNX.
+- **JustType:** A responsive typing practice web application.
+- **Blogsy:** A blog web application built with Node.js, Express.js, EJS, and Tailwind CSS.
+- **G-News:** A news-related web project.
+- **Portronics Clone:** A frontend e-commerce website clone.
+- **Chess Simulation:** A React-based chessboard with piece movement highlighting.
+
+## Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Inam-Ul-Haq-Baba/Portfolio.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Portfolio
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal (usually `http://localhost:5173`).
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command | Description |
+|---|---|
+| `npm run dev` | Starts the development server |
+| `npm run build` | Builds the project for production |
+| `npm run preview` | Previews the production build locally |
 
-### `npm start`
+## Deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This portfolio is deployed using **GitHub Pages**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project uses GitHub Actions for automated deployment. Whenever changes are pushed to the `main` branch, the workflow builds and deploys the updated website.
 
-### `npm test`
+## Connect With Me
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **GitHub:** [Inam-Ul-Haq-Baba](https://github.com/Inam-Ul-Haq-Baba)
+- **LinkedIn:** [Inam Ul Haq Baba](https://linkedin.com/in/inam-ul-haq-babawork)
+- **Email:** [peerzadainamwork@gmail.com](mailto:peerzadainamwork@gmail.com)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ If you find my work interesting, feel free to explore my projects and connect with me!
